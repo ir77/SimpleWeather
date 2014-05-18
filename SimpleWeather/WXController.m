@@ -74,10 +74,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-// 1
+// 1.Pragma marks are a great way to help organize your code..
 #pragma mark - UITableViewDataSource
 
-// 2
+// 2.Your table view has two sections, one for hourly forecasts and one for daily.
+//   You always return 2 for the number of table view sections.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
 }
@@ -95,7 +96,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     
-    // 3
+    // 3.Forecast cells shouldn’t be selectable.
+    //   Give them a semi-transparent black background and white text.
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
     cell.textLabel.textColor = [UIColor whiteColor];
@@ -111,6 +113,16 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     // TODO: Determine cell height based on screen
     return 44;
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    CGRect bounds = self.view.bounds;
+    
+    self.backgroundImageView.frame = bounds;
+    self.blurredImageView.frame = bounds;
+    self.tableView.frame = bounds;
 }
 
 @end
