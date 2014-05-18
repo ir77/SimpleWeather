@@ -64,15 +64,22 @@
     [self.view addSubview:self.tableView];
     
     //---------------------------------------------------------------------//
-    // 1
+    // 1.Set the header of your table to be the same size of your screen.
+    //   You’ll be taking advantage of UITableView’s paging
+    //   which will page the header and the daily and hourly forecast sections.
     CGRect headerFrame = [UIScreen mainScreen].bounds;
-    // 2
+    
+    // 2.Create an inset (or padding) variable so that all your labels are evenly spaced and centered.
     CGFloat inset = 20;
-    // 3
+    
+    // 3.Create and initialize the height variables for your various views.
+    //   Setting these values as constants makes it easy
+    //   to configure and changing your view setup if required.
     CGFloat temperatureHeight = 110;
     CGFloat hiloHeight = 40;
     CGFloat iconHeight = 30;
-    // 4
+    
+    // 4.Create frames for your labels and icon view based on the constant and inset variables.
     CGRect hiloFrame = CGRectMake(inset,
                                   headerFrame.size.height - hiloHeight,
                                   headerFrame.size.width - (2 * inset),
@@ -87,17 +94,20 @@
                                   temperatureFrame.origin.y - iconHeight,
                                   iconHeight,
                                   iconHeight);
-    // 5
+    // 5.Copy the icon frame, adjust it so the text has some room to expand,
+    //   and move it to the right of the icon.
+    //   You’ll see how this layout math works once we add the label to the view below.
     CGRect conditionsFrame = iconFrame;
     conditionsFrame.size.width = self.view.bounds.size.width - (((2 * inset) + iconHeight) + 10);
     conditionsFrame.origin.x = iconFrame.origin.x + (iconHeight + 10);
+    
     //---------------------------------------------------------------------//
-    // 1
+    // 1.Set the current-conditions view as your table header.
     UIView *header = [[UIView alloc] initWithFrame:headerFrame];
     header.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = header;
     
-    // 2
+    // 2.Build each required label to display weather data.
     // bottom left
     UILabel *temperatureLabel = [[UILabel alloc] initWithFrame:temperatureFrame];
     temperatureLabel.backgroundColor = [UIColor clearColor];
@@ -129,7 +139,7 @@
     conditionsLabel.textColor = [UIColor whiteColor];
     [header addSubview:conditionsLabel];
     
-    // 3
+    // 3.Add an image view for a weather icon.
     // bottom left
     UIImageView *iconView = [[UIImageView alloc] initWithFrame:iconFrame];
     iconView.contentMode = UIViewContentModeScaleAspectFit;
