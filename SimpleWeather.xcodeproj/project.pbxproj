@@ -50,6 +50,7 @@
 		B1C34C5519290666008E7593 /* WXCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C34C5419290666008E7593 /* WXCondition.m */; };
 		B1C34C581929068F008E7593 /* WXDailyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C34C571929068F008E7593 /* WXDailyForecast.m */; };
 		B1C34C5B192906A7008E7593 /* WXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C34C5A192906A7008E7593 /* WXManager.m */; };
+		B1C34C5D19290B37008E7593 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C34C5C19290B37008E7593 /* MapKit.framework */; };
 		D5CA538CA1B144FABE7BCB5B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D64A2B553F41E98D42FB04 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +119,7 @@
 		B1C34C571929068F008E7593 /* WXDailyForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDailyForecast.m; sourceTree = "<group>"; };
 		B1C34C59192906A7008E7593 /* WXManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXManager.h; sourceTree = "<group>"; };
 		B1C34C5A192906A7008E7593 /* WXManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXManager.m; sourceTree = "<group>"; };
+		B1C34C5C19290B37008E7593 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1C34C5D19290B37008E7593 /* MapKit.framework in Frameworks */,
 				B13BD5B71928F3A800C114E0 /* CoreGraphics.framework in Frameworks */,
 				B13BD5B91928F3A800C114E0 /* UIKit.framework in Frameworks */,
 				B13BD5B51928F3A800C114E0 /* Foundation.framework in Frameworks */,
@@ -168,6 +171,7 @@
 		B13BD5B31928F3A800C114E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1C34C5C19290B37008E7593 /* MapKit.framework */,
 				B13BD5B41928F3A800C114E0 /* Foundation.framework */,
 				B13BD5B61928F3A800C114E0 /* CoreGraphics.framework */,
 				B13BD5B81928F3A800C114E0 /* UIKit.framework */,

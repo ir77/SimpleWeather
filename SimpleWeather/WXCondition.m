@@ -7,6 +7,7 @@
 //
 
 #import "WXCondition.h"
+#import "WXManager.h"
 
 @implementation WXCondition
 
